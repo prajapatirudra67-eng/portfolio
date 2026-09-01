@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rudra Kumar | Aspiring AI Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060708;--white:#f4f5f1;--muted:#92979e;--green:#a7f36a;--border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.16);--width:1180px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+body:before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:55px 55px;pointer-events:none;z-index:-10}
+.glow{position:fixed;border-radius:50%;pointer-events:none;filter:blur(110px);z-index:-5}.glow-one{width:430px;height:430px;right:-170px;top:-170px;background:rgba(167,243,106,.055);animation:move 14s ease-in-out infinite alternate}.glow-two{width:400px;height:400px;left:-250px;top:40%;background:rgba(70,120,255,.035)}
+@keyframes move{to{transform:translate(-170px,170px)}}@keyframes pulse{50%{transform:scale(1.45)}}@keyframes float{50%{transform:translateY(-9px)}}@keyframes hero{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+header{position:fixed;top:0;left:0;width:100%;height:72px;padding:0 35px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,7,8,.84);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);z-index:1000}
+.logo{font-family:Manrope,sans-serif;font-size:27px;font-weight:800}.logo span,.category,.skill-row span,.role-label,.contact-title span{color:var(--green)}
+nav{display:flex;gap:25px;align-items:center}nav a{color:#969ba2;font-size:10px;font-weight:600;transition:.25s}nav a:hover{color:var(--green)}
+.resume{padding:8px 14px;border:1px solid var(--border2);color:var(--white)}.menu{display:none;background:none;border:0;color:#fff;font-size:25px}
+.mobile-menu{display:none;position:fixed;top:72px;width:100%;padding:15px 25px;background:#060708;z-index:999}.mobile-menu.active{display:block}.mobile-menu a{display:block;padding:12px 0;color:#aaa;border-bottom:1px solid var(--border)}
+section{max-width:var(--width);margin:auto;padding:65px 45px;border-top:1px solid rgba(255,255,255,.065)}
+.label{display:flex;gap:14px;align-items:center;margin-bottom:30px;color:#858b92;font-size:11px;font-weight:800;letter-spacing:2.5px}.label:after{content:"";width:45px;height:1px;background:var(--border2)}
+#home{min-height:100vh;padding:120px 45px 65px;border:0;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:55px}
+.status{display:flex;gap:8px;align-items:center;margin-bottom:20px;color:#92979e;font-size:10px;font-weight:700;letter-spacing:2px}.status-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 15px rgba(167,243,106,.8);animation:pulse 2s infinite}
+.hero-title{font-family:Manrope,sans-serif;font-size:clamp(72px,8vw,115px);line-height:.85;letter-spacing:-6px;font-weight:800;margin-bottom:25px;animation:hero .8s ease}.hero-title span{color:var(--green)}
+.role{font-family:Manrope,sans-serif;font-size:21px;font-weight:700}.description{max-width:640px;margin:10px 0 23px;color:var(--muted);font-size:15px;line-height:1.8}
+.buttons{display:flex;flex-wrap:wrap;gap:8px}.btn{display:inline-flex;padding:11px 17px;border-radius:4px;font-size:10px;font-weight:600;transition:.3s}.primary{background:var(--white);color:#070809}.outline{border:1px solid var(--border2);color:#d2d5d1}.btn:hover{transform:translateY(-3px);border-color:var(--green)}
+.photo-area{display:flex;justify-content:center}.photo-card{position:relative;width:275px;height:355px;padding:8px;background:#0a0b0c;border:1px solid var(--border);box-shadow:0 30px 80px rgba(0,0,0,.55);animation:float 5s ease-in-out infinite}.photo-card img{width:100%;height:100%;object-fit:cover;display:block}.photo-info{position:absolute;left:18px;bottom:18px;padding:7px 9px;background:rgba(5,6,7,.9);border:1px solid var(--border2);font-size:7px;font-weight:700;letter-spacing:1px}.corner{position:absolute;width:16px;height:16px;border-color:var(--green);border-style:solid;z-index:5}.corner-one{top:-1px;left:-1px;border-width:1px 0 0 1px}.corner-two{right:-1px;bottom:-1px;border-width:0 1px 1px 0}
+.about-grid,.experience{display:grid;grid-template-columns:.75fr 1fr;gap:55px}.about-heading{font-family:Manrope,sans-serif;font-size:clamp(50px,5vw,70px);line-height:.95;letter-spacing:-4px}.about-heading span{color:#62676e}.about-text,.experience p{color:var(--muted);font-size:15px;line-height:1.85}.about-text p{margin-bottom:12px}.stats{display:flex;gap:40px;margin-top:24px;padding-top:17px;border-top:1px solid var(--border)}.stat-number{font-family:Manrope;font-size:28px;font-weight:800}.stat-name{color:#696e75;font-size:8px;font-weight:700;letter-spacing:1.5px}
+.compact-skills{border-top:1px solid var(--border)}.skill-row{display:grid;grid-template-columns:190px 1fr;align-items:center;min-height:58px;padding:9px 0;border-bottom:1px solid var(--border)}.skill-row span{font-size:9px;font-weight:800;letter-spacing:1.8px}.skill-row p{color:#92979e;font-size:13px}
+.projects{display:grid;gap:12px}.project{display:grid;grid-template-columns:38px 1fr 105px;gap:18px;padding:27px;border:1px solid var(--border);background:linear-gradient(135deg,rgba(255,255,255,.022),transparent);transition:.35s}.project:hover,.edu:hover{transform:translateY(-4px);border-color:var(--border2)}.number{color:#555a61;font-size:10px}.category{margin-bottom:6px;font-size:9px;font-weight:800;letter-spacing:2px}.in-progress{display:inline-block;margin-bottom:8px;padding:3px 6px;border:1px solid rgba(167,243,106,.3);color:var(--green);font-size:7px;font-weight:700;letter-spacing:1.5px}.project h2{margin-bottom:9px;font-family:Manrope;font-size:27px;line-height:1.15}.project p{color:var(--muted);font-size:13px;line-height:1.8}.points{margin-top:11px;list-style:none;color:#858a91;font-size:12px}.points li{margin:3px 0}.points li:before{content:"— ";color:#50555b}.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:13px}.tags span{padding:4px 7px;border:1px solid #2b2f34;color:#7d8289;font-size:8px}.project-right{display:flex;justify-content:flex-end;align-items:flex-start}.project-link{padding:6px 9px;border:1px solid var(--border2);color:#999ea5;font-size:8px;font-weight:600}
+.company{font-family:Manrope;font-size:20px;font-weight:700}.program{color:#6c7178;font-size:10px}.role-label{font-size:9px;font-weight:800;letter-spacing:2px}.experience h2{margin:4px 0 8px;font-family:Manrope;font-size:30px}
+.certifications{border-top:1px solid var(--border)}.cert{display:grid;grid-template-columns:35px 1fr auto;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}.cert-no{color:#555a61;font-size:9px}.cert-name{font-family:Manrope;font-size:13px;font-weight:600}.cert-source{color:#686d74;font-size:9px}
+.education{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.edu{min-height:210px;padding:25px;border:1px solid var(--border);transition:.35s}.edu-date{color:var(--green);font-size:8px;font-weight:700;letter-spacing:1.2px}.edu h3{margin-top:30px;font-family:Manrope;font-size:17px}.edu-place{color:#70757c;font-size:10px}.edu-degree{display:block;margin-top:17px;color:#90949a;font-size:11px}.edu-grade{display:block;margin-top:5px;font-family:Manrope;font-size:23px}
+#contact{padding-top:80px;padding-bottom:80px}.contact-title{font-family:Manrope;font-size:clamp(50px,6vw,80px);line-height:.95;letter-spacing:-4px}.contact-text{max-width:580px;margin-top:17px;color:var(--muted);font-size:13px}.email{display:inline-block;margin-top:23px;padding-bottom:6px;border-bottom:1px solid #3a3e44;font-family:Manrope;font-size:clamp(20px,2.7vw,32px);font-weight:700}.socials{display:flex;gap:22px;margin-top:18px;flex-wrap:wrap}.socials a{color:#888d94;font-size:11px;font-weight:600}.socials a:hover{color:var(--green)}
+footer{max-width:var(--width);margin:auto;padding:20px 45px;border-top:1px solid rgba(255,255,255,.075);display:flex;justify-content:space-between;color:#555a61;font-size:9px}.reveal{opacity:0;transform:translateY(20px);transition:.7s}.reveal.show{opacity:1;transform:translateY(0)}
+@media(max-width:1000px){nav{display:none}.menu{display:block}#home{grid-template-columns:1fr}.about-grid,.experience{grid-template-columns:1fr}.education{grid-template-columns:1fr}}
+@media(max-width:700px){section,#home{padding-left:25px;padding-right:25px}header{padding:0 25px}.hero-title{font-size:65px}.photo-area{justify-content:flex-start}.photo-card{width:245px;height:315px}.skill-row{grid-template-columns:1fr;gap:4px}.project{grid-template-columns:30px 1fr;padding:22px 18px}.project-right{grid-column:2;justify-content:flex-start}.project h2{font-size:23px}.cert{grid-template-columns:25px 1fr}.cert-source{display:none}footer{padding:20px 25px;flex-direction:column;gap:5px}}
+</style>
+</head>
+<body>
+<div class="glow glow-one"></div><div class="glow glow-two"></div>
+
+<header>
+<a href="#home" class="logo">RK<span>.</span></a>
+<nav>
+<a href="#about">ABOUT</a><a href="#skills">SKILLS</a><a href="#projects">PROJECTS</a><a href="#experience">EXPERIENCE</a><a href="#education">EDUCATION</a><a href="#contact">CONTACT</a>
+<a href="./Rudra-Kumar-CV.pdf" target="_blank" class="resume">CV ↗</a>
+</nav>
+<button class="menu" id="menu">☰</button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+<a href="#about">ABOUT</a><a href="#skills">SKILLS</a><a href="#projects">PROJECTS</a><a href="#experience">EXPERIENCE</a><a href="#education">EDUCATION</a><a href="#contact">CONTACT</a><a href="./Rudra-Kumar-CV.pdf" target="_blank">CV ↗</a>
+</div>
+
+<main>
+<section id="home">
+<div>
+<div class="status"><span class="status-dot"></span>ASPIRING AI ENGINEER</div>
+<h1 class="hero-title">Rudra<br><span>Kumar</span></h1>
+<div class="role">Computer Science & Engineering Student</div>
+<p class="description">Building practical software and exploring Artificial Intelligence, Generative AI, cloud technologies and modern software engineering.</p>
+<div class="buttons">
+<a href="#projects" class="btn primary">Explore My Work ↗</a>
+<a href="./Rudra-Kumar-CV.pdf" target="_blank" class="btn outline">View CV ↗</a>
+<a href="https://github.com/prajapatirudra67-eng" target="_blank" class="btn outline">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/rudra-prajapati-0b821b366/" target="_blank" class="btn outline">LinkedIn ↗</a>
+</div>
+</div>
+<div class="photo-area"><div class="photo-card"><span class="corner corner-one"></span><span class="corner corner-two"></span><img src="./rudra-photo.jpg" alt="Rudra Kumar"><div class="photo-info">RUDRA KUMAR · AI ENGINEER</div></div></div>
+</section>
+
+<section id="about"><div class="label">01 / ABOUT ME</div><div class="about-grid">
+<h2 class="about-heading reveal">Building today.<br><span>Engineering tomorrow.</span></h2>
+<div class="about-text reveal"><p>I'm a Computer Science and Engineering student interested in software development, Artificial Intelligence and Generative AI.</p><p>I enjoy building practical projects that solve real-world problems while improving my programming, development and problem-solving skills.</p><p>My goal is to grow into an <strong>AI Engineer</strong> and build useful intelligent applications.</p>
+<div class="stats"><div><div class="stat-number">6.77</div><div class="stat-name">CGPA</div></div><div><div class="stat-number">3+</div><div class="stat-name">PROJECTS</div></div><div><div class="stat-number">2025</div><div class="stat-name">B.TECH</div></div></div></div>
+</div></section>
+
+<section id="skills"><div class="label">02 / TECHNICAL SKILLS</div><div class="compact-skills">
+<div class="skill-row reveal"><span>PROGRAMMING</span><p>Python · C++ · C</p></div>
+<div class="skill-row reveal"><span>WEB DEVELOPMENT</span><p>HTML · CSS · JavaScript</p></div>
+<div class="skill-row reveal"><span>DATABASES</span><p>MySQL</p></div>
+<div class="skill-row reveal"><span>TOOLS</span><p>Git · GitHub · Figma</p></div>
+</div></section>
+
+<section id="projects"><div class="label">03 / SELECTED PROJECTS</div><div class="projects">
+<article class="project reveal"><div class="number">01</div><div><div class="category">CLOUD / DEVSECOPS</div><h2>Cloud-Native DevSecOps Vulnerability Assessment Platform</h2><p>An end-to-end DevSecOps platform that automates vulnerability scanning, containerization, CI/CD deployment, Kubernetes orchestration and monitoring.</p><ul class="points"><li>Python and Nmap vulnerability scanning</li><li>CVE lookup integration</li><li>Jenkins CI/CD with GitHub Webhooks</li><li>Docker containerization</li><li>Kubernetes deployment</li><li>Prometheus and Grafana monitoring</li><li>AWS EC2 infrastructure</li></ul><div class="tags"><span>Python</span><span>Flask</span><span>Nmap</span><span>Docker</span><span>Jenkins</span><span>Kubernetes</span><span>AWS</span><span>Grafana</span></div></div><div class="project-right"><a href="https://github.com/newin-1809/Cloud-Native-DevSecOps-Vulnerability-Assessment-Platform" target="_blank" class="project-link">GITHUB ↗</a></div></article>
+
+<article class="project reveal"><div class="number">02</div><div><div class="category">EDTECH / WEB DEVELOPMENT</div><span class="in-progress">IN DEVELOPMENT</span><h2>LinuxLab</h2><p>An interactive Linux learning platform currently under development, focused on structured learning and practical Linux experience for beginners.</p><ul class="points"><li>Interactive Linux learning concept</li><li>Structured learning content</li><li>Practice-oriented approach</li><li>Beginner-friendly interface</li></ul><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Linux</span></div></div><div class="project-right"><span class="project-link">WORKING</span></div></article>
+
+<article class="project reveal"><div class="number">03</div><div><div class="category">ACCESSIBILITY / AUTOMATION</div><h2>Automatic Home Automation System</h2><p>An accessibility-focused home automation system designed to reduce physical effort required to control household appliances and improve independence for people with disabilities.</p><ul class="points"><li>Accessibility-focused system design</li><li>Automated household appliance control</li><li>Reduced physical interaction</li><li>Solves a real-world problem</li></ul><div class="tags"><span>Automation</span><span>IoT</span><span>Accessibility</span><span>Hardware</span></div></div><div class="project-right"><span class="project-link">PROJECT</span></div></article>
+</div></section>
+
+<section id="experience"><div class="label">04 / EXPERIENCE</div><div class="experience">
+<div class="reveal"><div class="company">Lovely Professional University</div><div class="program">Career Development Program</div></div>
+<div class="reveal"><div class="role-label">PYTHON INSTRUCTOR</div><h2>Python Instructor</h2><p>Taught Python programming fundamentals to school students and helped them understand coding concepts, logical thinking and basic problem-solving.</p></div>
+</div></section>
+
+<section><div class="label">05 / CERTIFICATIONS</div><div class="certifications">
+<div class="cert reveal"><span class="cert-no">01</span><span class="cert-name">Master Generative AI and Generative AI Tools including ChatGPT</span><span class="cert-source">CERTIFICATION</span></div>
+<div class="cert reveal"><span class="cert-no">02</span><span class="cert-name">Infosys Cybersecurity Certification</span><span class="cert-source">INFOSYS</span></div>
+<div class="cert reveal"><span class="cert-no">03</span><span class="cert-name">Python Mastery Certification</span><span class="cert-source">INFOSYS</span></div>
+</div></section>
+
+<section id="education"><div class="label">06 / EDUCATION</div><div class="education">
+<div class="edu reveal"><div class="edu-date">AUG 2025 — PRESENT</div><h3>Lovely Professional University</h3><div class="edu-place">Phagwara, Punjab</div><span class="edu-degree">Bachelor of Technology — Computer Science & Engineering</span><strong class="edu-grade">6.77 CGPA</strong></div>
+<div class="edu reveal"><div class="edu-date">MAY 2021 — MAR 2023</div><h3>Bright Home International School</h3><div class="edu-place">Saharanpur, Uttar Pradesh</div><span class="edu-degree">Higher Secondary Education</span><strong class="edu-grade">75%</strong></div>
+<div class="edu reveal"><div class="edu-date">JUN 2020 — MAR 2021</div><h3>Bright Home International School</h3><div class="edu-place">Nellore, Andhra Pradesh</div><span class="edu-degree">Secondary Education</span><strong class="edu-grade">83.7%</strong></div>
+</div></section>
+
+<section id="contact"><div class="label">07 / LET'S CONNECT</div><h2 class="contact-title reveal">Let's build something<br><span>worth talking about.</span></h2><p class="contact-text reveal">Interested in internships, collaboration or technology projects? Feel free to reach out.</p><a href="mailto:prajapatirudra67@gmail.com" class="email reveal">prajapatirudra67@gmail.com ↗</a>
+<div class="socials reveal"><a href="https://www.linkedin.com/in/rudra-prajapati-0b821b366/" target="_blank">LinkedIn ↗</a><a href="https://github.com/prajapatirudra67-eng" target="_blank">GitHub ↗</a><a href="tel:+919286220286">+91 92862 20286</a></div></section>
+</main>
+<footer><span>© 2026 Rudra Kumar</span><span>Aspiring AI Engineer</span></footer>
+
+<script>
+const els=document.querySelectorAll(".reveal");
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");obs.unobserve(e.target)}}),{threshold:.08});
+els.forEach(e=>obs.observe(e));
+const menu=document.getElementById("menu"),mobile=document.getElementById("mobileMenu");
+menu.onclick=()=>mobile.classList.toggle("active");
+document.querySelectorAll(".mobile-menu a").forEach(a=>a.onclick=()=>mobile.classList.remove("active"));
+const photo=document.querySelector(".photo-card");
+photo.onmousemove=e=>{let r=photo.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;photo.style.animation="none";photo.style.transform=`perspective(900px) rotateX(${y/(r.height/2)*-3}deg) rotateY(${x/(r.width/2)*3}deg) translateY(-5px)`};
+photo.onmouseleave=()=>{photo.style.transform="";photo.style.animation="float 5s ease-in-out infinite"};
+</script>
+</body>
+</html>
